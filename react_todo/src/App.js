@@ -12,10 +12,14 @@ function App() {
     <div className="App">
       <header>
         <h1>My First Ever React Project</h1>
-        <p>{inputText}</p>
       </header>
-      <Form setInputText={setInputText} />
-      <TodoList />
+      <Form
+        inputText={inputText}
+        todos={todos}
+        setTodos={setTodos}
+        setInputText={setInputText}
+      />
+      <TodoList setTodos={setTodos} todos={todos} />
     </div>
   );
 }
